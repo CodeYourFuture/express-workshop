@@ -11,14 +11,16 @@ app.use(formidable());
 
 app.post("/create-post", function (req, res) {
     console.log(req.fields);
-    // fs.writeFile(__dirname + '/data/posts.json', JSON.stringify(req.fields), function () {
-    //     console.log(req.fields)
-    // })
-    const postsContent = fs.readFileSync(__dirname + '/data/posts.json');
-    const posts = JSON.parse(postsContent);
-    posts[Date.now()] = req.fields.blogpost;
-    fs.writeFileSync(__dirname + '/data/posts.json', JSON.stringify(posts));
-    res.send(200, posts);
+    
+    //const postsContent = fs.readFileSync(__dirname + '/data/posts.json');
+
+    fs.readFile(__dirname + '/data/posts.json', function (erro, file) {
+        const posts = JSON.parse(file);
+        posts[Date.now()] = req.fields.blogpost;
+        fs.writeFile(__dirname + '/data/posts.json', JSON.stringify(posts), function () {
+            res.send(200, posts);
+        })
+    })
 })
 app.listen(3000, function () {
     console.log("Server up to runing");

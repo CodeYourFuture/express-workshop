@@ -18,9 +18,13 @@ app.post("/create-post", function (req, res) {
         const posts = JSON.parse(file);
         posts[Date.now()] = req.fields.blogpost;
         fs.writeFile(__dirname + '/data/posts.json', JSON.stringify(posts), function () {
-            res.send(200, posts);
+            res.send(200, req.fields);
         })
     })
+})
+
+app.get("/get-posts", function (req, res) {
+    res.sendFile(__dirname + '/data/posts.json');
 })
 app.listen(3000, function () {
     console.log("Server up to runing");

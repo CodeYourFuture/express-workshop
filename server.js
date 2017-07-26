@@ -6,14 +6,8 @@ const fs = require('fs');
 app.use(express.static("public"));
 app.use(formidable());
 
-
-
-
 app.post("/create-post", function (req, res) {
     console.log(req.fields);
-    
-    //const postsContent = fs.readFileSync(__dirname + '/data/posts.json');
-
     fs.readFile(__dirname + '/data/posts.json', function (erro, file) {
         const posts = JSON.parse(file);
         posts[Date.now()] = req.fields.blogpost;
@@ -26,6 +20,10 @@ app.post("/create-post", function (req, res) {
 app.get("/get-posts", function (req, res) {
     res.sendFile(__dirname + '/data/posts.json');
 })
+app.get('/public/about.html', function (req, res)
+{
+    res.render('about.html');
+});
 app.listen(3000, function () {
     console.log("Server up to runing");
 })

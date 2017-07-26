@@ -139,7 +139,17 @@ hr {
 .post p {
 	margin: 5px 10px;
 }
-
+/***************************
+	About Us
+***************************/
+.about-us{
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+}
+.about-us >p{
+	line-height: 1.8;
+}
 @media (min-width: 600px) {
 	 .post {
 		width: 28.9%;

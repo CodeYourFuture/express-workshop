@@ -1,0 +1,13 @@
+{
+  "name": "express-workshop-forked",
+  "version": "1.0.0",
+  "description": "this is to practice basic node and express",
+  "main": "server.js",
+  "repository": "git@github.com:rajgthub/express-workshop.git",
+  "author": "raj <rraju12@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-formidable": "^1.0.0"
+  }
+}

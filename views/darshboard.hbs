@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            .container {
+                margin: auto 25%;
+            }
+        </style>
+    <title>Handlebars example</title>
+</head>
+
+<body>
+    <section class="container">
+         {{> header}}
+        <nav>
+            <a href="/darshboard/contact">Contact page</a>
+            <a href="/darshboard/about">About page</a>
+        </nav>
+        <main>{{setUpper "Welcome to darshboar page"}}</main>
+        {{> footer}}
+    </section>
+    
+</body>
+
+</html>

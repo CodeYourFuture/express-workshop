@@ -6,8 +6,12 @@
   "repository": "git@github.com:rajgthub/express-workshop.git",
   "author": "raj <rraju12@gmail.com>",
   "license": "MIT",
+  "scripts":{
+    "dev": "nodemon server.js -e js,hbs"
+  },
   "dependencies": {
     "express": "^4.16.3",
-    "express-formidable": "^1.0.0"
+    "express-formidable": "^1.0.0",
+    "hbs": "^4.0.1"
   }
 }

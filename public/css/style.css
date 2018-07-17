@@ -1,0 +1,290 @@
+/* LEGACY BROWSERS */
+section, article, aside, footer, header, nav {
+  display: block;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,400i,700');
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Roboto' , sans-serif;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+section {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 6rem;
+}
+
+article {
+  width: 100%;
+}
+
+aside {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: 1px 10px 50px 10px rgba(0,0,0,0.075);
+  font-size: 0.8rem;
+  margin-left: 100px;
+  padding: 1rem 2rem;
+  width: 40%;
+}
+
+nav , footer {
+  align-items: center;
+  background-color: rgba(47,47,47,0.98);
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  width: 100%;
+}
+
+footer {
+  color: rgb(153, 153, 153);
+}
+
+nav {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+h1, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1 , h2 {
+  color: rgb(255, 255, 255);
+  margin-right: 4%;
+  text-align: right;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Navbar */
+
+nav > a  , nav > p {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+nav > a {
+  color: rgb(153, 153, 153);
+  padding: 10px 20px;
+}
+
+nav > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+nav > p {
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+  padding: 0 20px;
+}
+
+.hero {
+  background-size: cover;
+  height: calc(100vh - 56px);
+  width: 100%;
+}
+
+/*Section - Hero Cover */
+
+.hero.cover {
+  background-image: url('https://cdn5.kicksonfire.com/wp-content/uploads/2017/02/Serena-Williams.jpg?x76107');
+  background-position: top center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+/*Section - Intro */
+
+section.intro , section.playing , section.off-court{
+  background-color: #eee;
+}
+
+section > article.intro {
+  width: 70%;
+}
+
+/* Section - Facts */
+
+section.facts li {
+  margin-bottom: 1.2rem;
+}
+
+section.facts span {
+  font-weight: bold;
+}
+
+/* Section - Visuals */
+figure.visuals {
+  margin: 0;
+  max-height: calc(100vh - 56);
+  overflow-y: hidden;
+}
+
+figure.visuals img {
+  height: auto;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+/* Section - Career */
+.career h3 {
+  text-align: center;
+}
+
+section.career table {
+  box-shadow: -8px 10px 36px 5px rgba(59,70,78,0.15);
+  margin: 0 auto;
+  width: 80%;
+}
+
+section.career table {
+  box-shadow: -8px 10px 36px 5px rgba(59,70,78,0.15);
+  margin: 0 auto;
+  padding: 2rem;
+  width: 70%;
+}
+
+.career table thead {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.career th, td {
+  padding: 0.5rem;
+}
+
+.total-slam {
+  background-color: rgb(102, 103, 126);
+  color: rgb(255, 255, 255);
+}
+
+.career table thead , .total-category {
+  background-color: rgb(56, 59, 83);
+  color: rgb(255, 255, 255);
+}
+
+/* Emoji */
+
+figure.emoji {
+  animation: emoji 1.5s ease infinite;
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+}
+
+figure.emoji:hover {
+  animation-play-state: paused;
+  opacity: 0.5;
+}
+
+@keyframes emoji {
+  30% { transform: scale(1.1); }
+  40%, 60% { transform: rotate(-20deg) scale(1.1); }
+  50% { transform: rotate(20deg) scale(1.1); }
+  70% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+figure.emoji img {
+  max-width: 90px;
+}
+
+/* Source */
+
+div.source {
+  padding: 6rem;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1600px) {
+  section.career table {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait), (max-width: 768px){
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  section.intro {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  aside {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  section.career {
+    padding: 3rem;
+  }
+
+  section.career table {
+    padding: 0;
+    max-width: 70%;
+    width: inherit;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: 3rem;
+  }
+
+  section.career {
+    padding: 1rem;
+  }
+
+  section.career table {
+    font-size: 0.6rem;
+  }
+}

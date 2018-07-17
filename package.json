@@ -18,6 +18,7 @@
   "homepage": "https://github.com/franciscavargas/express-workshop#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "express-formidable": "^1.0.0"
+    "express-formidable": "^1.0.0",
+    "express-handlebars": "^3.0.0"
   }
 }

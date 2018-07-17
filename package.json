@@ -1,0 +1,15 @@
+{
+  "name": "activity",
+  "version": "1.0.0",
+  "description": "an express activity",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Behnaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-formidable": "^1.0.0"
+  }
+}

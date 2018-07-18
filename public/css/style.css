@@ -1,0 +1,170 @@
+body{
+  body{
+  font: 16px/1.5  Arial, Helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#DCDCDC;
+}
+}
+/* global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+ul{
+  margin:0;
+  padding: 0;
+}
+.button_1{
+  height: 20px;
+  background: #ffa500;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+.dark{
+  padding: 15px;
+  background: hsl(0, 0%, 71%);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+/* Header */
+header{
+  background: #808080;
+  color:#ffffff;
+  padding-top:20px;
+  min-height:70px;
+  border-bottom:#7B68EE 3px solid;
+}
+header a{
+  color:#ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+header li{
+  float:left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+header #branding{
+  float: left;
+}
+header #branding h1{
+  margin: 0;
+}
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+header .highlight, header .current a{
+  color: #6a5acd;
+  font-weight: bold;
+}
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+/* showcase */
+#showcase{
+  background-image: url('http://www.ovocreatives.com/wp-content/uploads/2016/11/web-design-toolkit-ideas.jpg');
+  min-height: 500px;
+  text-align: center;
+  color: #008080;
+  background: no repeat 0 -500px;
+  background-size: 100%;
+}
+showcase h1{
+  margin-top: 10px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+showcase p{
+  font-size: 20px;
+}
+/* Newsletter */
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background: #35424a;
+}
+#newsletter h1{
+  float: left;
+}
+#newsletter form{
+  float: right;
+  margin-top: 15px;
+}
+#newsletter input[type="email"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+/* boxes*/
+#boxes{
+  margin-top: 20px;
+}
+#boxes .box{
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+#boxes .box img{
+  width: 50px;
+}
+/* side */
+aside#side{
+  width: 35%;
+  float: right;
+  margin-top: 10px;
+}
+aside#side .quote input, aside#side .quote textarea{
+  width: 90%;
+  padding: 5px;
+}
+/* main-col */
+article#main-col{
+  width: 60%;
+  float: left;
+}
+/* services */
+ul#services li{
+  list-style:none;
+  border: #ffa500 solid 0px;
+  padding: 20px;
+  margin-bottom: 6px;
+  background: #787878;
+}
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: hsl(0, 100%, 75%);
+  text-align: center;
+}
+/* Media Queries */
+@media(mix-width: 768px){
+  header #branding, header nav, header nav li, #newsletter h1, #newsletter form, #boxes .box, article#main-col, aside#side{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+header{
+  padding-bottom: 20px;
+}
+#showcase{
+  margin-top: 40px;
+}
+#newsletter button, .quote button{
+  display: block;
+  width: 100%;
+}
+#newsletter form input[type="email"], .quote input, .quote textarea{
+  width: 100%;
+  margin-bottom: 5px;
+}
+}

@@ -55,25 +55,21 @@ function getBlogposts(url) {
 }
 
 function addBlogpostsToPage (data) {
-    data.map(obj => {
-        for (var blogpost in obj) {
-            if (obj.hasOwnProperty(blogpost)) {
-              var postDiv = document.createElement("div");
-              var postText = document.createElement("p");
-              var thumbnail = document.createElement("img");
-              var postContainer = document.querySelector(".post-container");
+    data.map(post => {  
+          if (post.hasOwnProperty("blogpost")) {
+            var postDiv = document.createElement("div");
+            var postText = document.createElement("p");
+            var thumbnail = document.createElement("img");
+            var postContainer = document.querySelector(".post-container");
 
-              thumbnail.src = "./img/logo2.png";
-              thumbnail.className = "thumbnail";
-              postText.innerHTML = obj[blogpost];
-              postDiv.className = "post";
+            thumbnail.src = "./img/logo2.png";
+            thumbnail.className = "thumbnail";
+            postText.innerHTML = post.blogpost;
+            postDiv.className = "post";
 
-              postDiv.appendChild(thumbnail);
-              postDiv.appendChild(postText);
-              postContainer.appendChild(postDiv);
-            }
-        }
-    })
-    
-    
+            postDiv.appendChild(thumbnail);
+            postDiv.appendChild(postText);
+            postContainer.appendChild(postDiv);
+          }
+    })   
 }

@@ -13,8 +13,7 @@ const pathPostsFile = __dirname + "/data/posts.json";
 const app = express()
 
 //reading posts
-let allposts = []
-allposts = JSON.parse(fs.readFileSync(pathPostsFile).toString());
+let allposts = JSON.parse(fs.readFileSync(pathPostsFile).toString());
 
 //serving public assets middleware
 app.use(express.static('public'))

@@ -1,0 +1,23 @@
+{
+  "name": "myfirstexpress",
+  "version": "1.0.0",
+  "description": "First Express Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHDGhanemBalhawan/express-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MHDGhanemBalhawan/express-workshop/issues"
+  },
+  "homepage": "https://github.com/MHDGhanemBalhawan/express-workshop#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-formidable": "^1.0.0"
+  }
+}

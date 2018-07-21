@@ -1,0 +1,417 @@
+@import "compass/css3";
+
+html, body {
+	margin:0px;
+	padding:0px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+ul, ol {
+	list-style: none;
+}
+.navigation {
+  list-style: none;
+  margin: 0; 
+  background: #163f68;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken(#303d43, 2%);
+}
+h2 {
+	padding-left: 5px;
+}
+.main {
+    width: 100%;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	justify-content: center;
+	min-height: 100vh;
+}
+.head-img {
+	width: 100%;
+}
+
+.width {
+	width: 100%;
+}
+
+.white {
+	background-color: #fff;
+	min-height: 90px;
+	padding:0px;
+	margin: 0px;
+	margin-top:auto; 
+	margin-bottom:auto;
+	display: flex;
+}
+
+.car-photo {
+	border-radius: 50%;
+	display: flex;
+    justify-content: center;
+	width: 70%;
+	height: auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 0px;
+	margin-bottom: 35px;
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+.small-img {
+	width: auto;
+	height: 75px;
+}
+.column {
+	flex: 1 1 auto;
+	float: left;
+	position: relative;
+    bottom: 0;
+	overflow: "";
+    text-overflow:clip;
+	margin: 15px 2%;
+	-webkit-justify-content: space-around; /* Safari */
+	justify-content:	space-around;
+}
+.column p {
+	min-height:10vh;
+	margin: 0px;
+	padding: 10px;
+	line-height: 1.5rem;
+	font-size: 0.9rem;
+}
+.repair {
+	color: #1f5f9f;
+}
+.servicing {
+	color: #1f5f9f;
+}
+.tyres {
+	color: #1f5f9f;
+}
+.testimonials-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px;
+	padding: 0px;
+	background: #f6f6f6;
+	text-align: center;
+	width: 100%;
+	font-size: 0.875rem;
+}
+.testimonials-container i.fa {
+	font-size: 0.875rem;
+	color: #ff3333;
+	margin-bottom: 10px;
+}
+
+.testimonials-head {
+	text-align: center;
+	color: #1f5f9f;
+	width: 95%;
+}
+.testimonials {
+	flex: 1 1 auto;
+	float: left;
+	position: relative;
+    bottom: 0;
+	overflow: "";
+	margin: 30px;
+	padding: 10px;
+	justify-content: center;
+	color: #1f5f9f;
+	min-width: 200px;
+}
+
+.about-top-row {
+    width: 100%;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	justify-content: center;
+
+}
+.serviceman-name {
+	text-align: center; 	
+	margin: auto;
+}
+img.serviceman-photo {
+	border-radius: 50%;
+	display: flex;
+    justify-content: center;
+	width: 70%;
+	height: auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+	margin-bottom: 35px;
+	top: 5%;
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+	border: 5px solid #f6f6f6;
+}
+.serviceman {
+	flex: 1 1 auto;
+	float: left;
+	position: relative;
+    bottom: 0;
+	overflow: "";
+    text-overflow:clip;
+	margin: 10px 2%;
+	/* padding: 5px; */
+	color: #1f5f9f;
+	 -webkit-justify-content: space-around; /* Safari */
+	justify-content:	space-around; 
+	min-height: 100vh;
+}
+
+div.about-top, .about p, .about-bottom p, .serviceman p, .about-text ul,.about-text li {
+	font-size: 0.99rem;
+	line-height: 1.4rem;
+}
+div.about-text ul {
+		padding: 0px;
+		-webkit-padding-start:: 0px;
+} 
+.car-image-about {
+	border-radius: 50%;
+	display: flex;
+    justify-content: center;
+	width: 80%;
+	height: auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 25%;
+	margin-bottom: 35px;
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+	border: 2px solid #b0a7aa;
+}
+
+.about-top {
+	flex: 1 1 auto;
+	float: left;
+	position: relative;
+    bottom: 0;
+	overflow: "";
+    text-overflow:clip;
+	margin: 15px 2%;
+	padding: 5px;
+	-webkit-justify-content: space-around; /* Safari */
+	justify-content:	space-around;
+	max-width: 28.5%;
+	margin: 10px;
+	color: #1f5f9f;
+}
+.about-top i.fa {
+	font-size: 0.875rem;
+	color: #ff3333;
+	margin-bottom: 10px;
+}
+
+.about {
+	margin: 20px 2% 10px 2%;
+	line-height: 1.5rem;
+	color: #1f5f9f;
+}
+.about h1{
+	text-align: center;
+}
+.about-bottom {
+	width: 100%;
+	margin: 10px 2% 0px 2%;
+	line-height: 1.5rem;
+	color: #1f5f9f;
+}
+
+.contact {
+	margin: 0px 0px 10px 0px;
+	color: #1f5f9f;
+	height: 100vh;
+	text-align: center;
+	min-height: 700px;
+	font-size: 0.875rem;
+}
+
+textarea, input[type=text] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border: 1px solid #1f5f9f; 
+}
+.contact-info {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 120px 0;
+	background: #f6f6f6;
+	text-align: center;
+	font-size: 0.875rem;
+}
+.contact-item {
+	flex: 0 0 33.3333%;
+	float: left;
+	position: relative;
+    bottom: 0;
+	overflow: "";
+    text-overflow:clip;
+	margin: 0 auto;
+	min-width: 200px;
+	
+}
+.contact-item p{
+	color: #1f5f9f;
+	
+}
+.contact-info i.fa {
+	font-size: 22px;
+	color: #ff3333;
+	margin-bottom: 10px;
+}
+
+.map {
+	width: 99.2%;
+	margin: 35px 0px 0px 10px;
+	padding: 0px;
+}
+.footer {
+	background-color: #163f68;
+	color: #fff;
+	padding: 10px;
+	margin-top: 2%;
+	min-height: 60px;
+	margin-bottom: 0;
+	bottom: 0;
+}
+.footer h4 {
+	padding: 0;
+	margin-top: 18px;
+	float: left;
+}
+.footer ul li {
+	display: inline-block;
+	margin: 0 10px;
+	float: right;
+	background-color: #163f68;
+	padding: 0;
+}
+.footer i.fa {
+	font-size: 18px;
+	color: #fff;
+	border-radius: 4px;
+	transition: all 0.3s;
+}
+.footer i.fa:hover {
+	color: #d4d7d0;
+}
+
+@media all and (max-width: 600px) {
+	.navigation {
+	-webkit-flex-flow: column wrap;
+	flex-flow: column wrap;
+	padding: 0;
+	}
+	.navigation a { 
+	text-align: center; 
+	padding: 10px;
+	border-top: 1px solid rgba(255,255,255,0.3); 
+	border-bottom: 1px solid rgba(0,0,0,0.1); 
+	}
+	.navigation li:last-of-type a {
+	border-bottom: none;
+	}
+	.footer h4{
+		font-size: 0.6rem;
+		float: left;
+	}
+	.footer i.fa {
+		font-size: 8px;
+		float: right;
+		margin-top: 5px;
+	}
+	.column {
+		max-width: 28.5%;
+		margin: 10px;
+	}
+	.about-top {
+		min-width: 250px;
+	}
+	.testimonials {
+		padding: 10px 5px;
+		margin: 0px 0px 10px 0px;
+		font-size: 0.6rem;
+		text-align: center;
+	}
+	div.about-top, .about p, .about-bottom p, .serviceman p, .about-text ul {
+		font-size: 0.875rem;
+		line-height: 1.2rem;
+	}
+	.about-text li {
+		padding: 0px;
+			font-size: 0.62rem;
+	}
+}
+@media all and (max-width: 800px) {
+	.navigation {
+	justify-content: space-around;
+	}
+	h1{
+		font-size: 1rem;
+	}
+}
+
+@media all and (max-width: 1020px) {
+	.serviceman {
+		max-width: 980px;
+	}
+	.column {
+		max-width: 980px;
+	}
+	div.about-top, .about p, .about-bottom p, .serviceman p, .about-text ul, .about h1, h2 {
+		font-size: 0.775rem;
+		line-height: 1.2rem;
+	}
+	.about-text li {
+		padding: 0px;
+			font-size: 0.62rem;
+	}
+
+}
+@media all and (min-width: 1020px) {
+	.serviceman  {
+		max-width: 300px;
+	}
+	.column {
+		max-width: 28.5%;
+	}
+	.testimonials {
+		max-width: 26%;
+	}
+}

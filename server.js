@@ -32,6 +32,7 @@ app.post('/post', (req, res) => {
     fs.writeFileSync(pathPostsFile, JSON.stringify(allposts));
     res.json(fs.readFileSync(pathPostsFile, "utf8"));
 })
+
 app.listen(port, (req, res) => {
     console.log("Server is runnig on port:", port); 
 })

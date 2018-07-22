@@ -7,11 +7,11 @@ if (document.readyState !== 'loading') {
 function ready () {
     getBlogposts("/posts");
     // send posts to server
-    var form = document.querySelector('form');
+    const form = document.querySelector('form');
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // prevents the form from contacting our server automatically (we want to do it ourselves)
-        var formActionUrl = form.action; // 'form.action' is the url '/create-post'
-        var formData = new FormData(form);
+        const formActionUrl = form.action; // 'form.action' is the url '/post'
+        const formData = new FormData(form);
         postBlogposts(formActionUrl, formData);
     });
 
@@ -41,24 +41,24 @@ function getBlogposts(url) {
     fetch(url, {
         method: 'GET'
     })
-        .then(function (res) {
-            res.json()
-                .then(function (json) {
-                    addBlogpostsToPage(json);
-                });
-        })
-        .catch(function (err) {
-            console.error(err)
+    .then(function (res) {
+        res.json()
+        .then(function (json) {
+            addBlogpostsToPage(json);
         });
+    })
+    .catch(function (err) {
+        console.error(err)
+    });
 }
 
 function addBlogpostsToPage (data) {
     JSON.parse(data).map(post => {  
           if (post.hasOwnProperty("blogpost")) {
-            var postDiv = document.createElement("div");
-            var postText = document.createElement("p");
-            var thumbnail = document.createElement("img");
-            var postContainer = document.querySelector(".post-container");
+            const postDiv = document.createElement("div");
+            const postText = document.createElement("p");
+            const thumbnail = document.createElement("img");
+            const postContainer = document.querySelector(".post-container");
 
             thumbnail.src = "./img/logo2.png";
             thumbnail.className = "thumbnail";

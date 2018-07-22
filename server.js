@@ -1,17 +1,25 @@
 var fs = require("fs");
 var express = require("express");
-var express = require("express");
 var formidable = require("express-formidable");
+const exphbs = require("express-handlebars");
 
 var app = express();
 
 app.use(express.static("public"));
 app.use(formidable());
 
+app.set("views", __dirname + "/views");
+app.engine("handlebars", exphbs({ defaultLayout: "mains" }));
+app.set("view engine", "handlebars");
+
 app.get("/get-posts", function(req, res) {
   res.sendFile(
     "/Users/seraphineyoung/Documents/express-workshop/data/posts.json"
   );
+});
+
+app.get("/home", function(req, res) {
+  res.render("home");
 });
 
 app.post("/create-post", function(req, res) {

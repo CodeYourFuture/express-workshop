@@ -2,38 +2,64 @@ const formidable = require("express-formidable");
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const handleBar = require("express-handlebars");
+const path = require('path');
+const _ = require('underscore');
+const mongoose = require('mongoose');
 var file = 'public';
+
+
 
 app.use(express.static("public"));
 app.use(formidable());
 
-app.post("/create", (req, res) => {
-  console.log(req.fields);
-  res.send("Thank you!");
+app.set('view', path.join(__dirname, 'view'));
+app.engine("handlebars", handleBar({defaultLayout: 'main',}));
+app.set('view engine', 'handlebars');
+
+app.get('/', (req, res) => {
+  res.render('home');
 });
 
-let studentData = {
-  "name": "Mike", 
-  "age": "25", 
-  "Location": "London"
-};
-console.log(studentData);
+//app.set('port', (process.env.PORT || 5000));
 
-const studentJson = JSON.stringify(studentData);
-console.log('json', studentJson);
-
- fs.writeFile("student.json", studentJson, function(error) {
- console.log('success', error);
- });
-
-
- fs.readFile('student.json', (err, data) => {  
-  if (err) throw err;
-  let student = JSON.parse(data);
-  console.log(student);
+app.get('/', (req, res) => {
+  res.render('home');
 });
 
-console.log('This is after the read call'); 
+
+// app.listen(app.get('port'), () => {
+//   console.log('Server started on port ' + app.get)
+
+// });
+
+// app.post("/create", (req, res) => {
+//   console.log(req.fields);
+//   res.send("Thank you!");
+// });
+
+// let studentData = {
+//   "name": "Mike", 
+//   "age": "25", 
+//   "Location": "London"
+// };
+// console.log(studentData);
+
+// const studentJson = JSON.stringify(studentData);
+// console.log('json', studentJson);
+
+//  fs.writeFile("student.json", studentJson, function(error) {
+//  console.log('success', error);
+//  });
+
+
+//  fs.readFile('data/student.json', (err, data) => {  
+//   if (err) throw err;
+//   let student = JSON.parse(data);
+//   console.log(student);
+// });
+
+// console.log('This is after the read call'); 
 
 // app.get("/student", (req,res) => {
 //     console.log("New request to Student page at " + Date());
@@ -49,9 +75,9 @@ app.get("*", (req, res) => {
   res.end();
 });
 
-app.listen(5000, () => {
-  console.log("Server is listening on port 5000. Ready to accept requests!");
-});
+// app.listen(5000, () => {
+//   console.log("Server is listening on port 5000. Ready to accept requests!");
+// });
 
 
 
@@ -77,20 +103,20 @@ app.listen(5000, () => {
 
 
 
-// const http = require("http");
+const http = require("http");
 
-// const server = http.createServer(function(req, res) {
+const server = http.createServer(function(req, res) {
 
-//     console.log("New request: " + Date());
+    console.log("New request: " + Date());
 
-//     console,log("New request: " + JSON)
+    console,log("New request: " + JSON)
   
-//     res.end("Hello World! ");
-// });
+    res.end("Hello World! ");
+});
 
-// server.listen(5000);
+server.listen(5000);
 
-// console.log("Node.js web server at port 5000 is running..");
+console.log("Node.js web server at port 5000 is running..");
 
 // const http = require("http");
 

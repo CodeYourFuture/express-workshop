@@ -30,7 +30,7 @@ function postBlogposts(url, data) {
       res.json().then(function(json) {
         addBlogpostsToPage(json);
         document.querySelector("form").reset();
-        window.location.href = "http://localhost:3000/posts"
+        window.location.pathname = "/"
       });
     })
     .catch(function(err) {
@@ -50,7 +50,7 @@ function getBlogposts(url) {
                 });
         })
         .catch(function (err) {
-            console.error(err)
+            console.error("err")
         });
 }
 

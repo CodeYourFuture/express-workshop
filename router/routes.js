@@ -12,7 +12,7 @@ module.exports = ( app) => {
     });
     app.get("/darshboard/about", (req, res) => {
         res.render("about.hbs", {
-            pageTitle: "About page",
+            pageTitle: "About page", 
         });
     });
 }
